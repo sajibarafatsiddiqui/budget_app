@@ -1,0 +1,10 @@
+  @font-face {
+    font-family: "Proxima Nova Reg";
+     src: font-url('proxima_nova_regular.woff2') format('woff2'),
+          font-url('proxima_nova_regular.ttf') format('truetype');
+  }
+
+  body {
+    font-family: "Proxima Nova Light";
+    background: #F0F2F1;
+  }

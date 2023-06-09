@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+     font-family: "LumieraRough";
+      src: url('/assets/LumieraRough-f26f1c58d8feafcecaf31fa95851526c41a5abf0a2f38bb6c2dc4424aabd70c6.ttf') format('truetype');
+   }
+
+   @import "bootstrap";
+
+
+

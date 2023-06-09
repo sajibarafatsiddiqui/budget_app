@@ -1,0 +1,10 @@
+<%= form_with model: @category,multipart: true, url: categories_path do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :Name %>
+
+    <%= form.label :icon_upload_image_as_string %>
+      <%= form.label :icon %>
+    <%= form.file_field :icon, id: :category_icon %>
+
+  <%= form.submit "Save" %>
+<% end %>
