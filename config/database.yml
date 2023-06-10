@@ -28,7 +28,7 @@ default: &default
 development:
   <<: *default
   database: BudgetApp_development
-   username: postgres
+  username: postgres
   password: postgres
   port: 9595
  
