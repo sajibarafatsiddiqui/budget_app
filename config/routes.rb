@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   unauthenticated do
     root to: 'home#index', as: :unauthenticated_root
@@ -9,8 +11,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
- 
-  resources :categories, only: [:index, :show, :create, :new] do
-    resources :deals, :only=> [:new, :create, :index, :show]
-    end
+
+  resources :categories, only: %i[index show create new] do
+    resources :deals, only: %i[new create index show]
+  end
 end

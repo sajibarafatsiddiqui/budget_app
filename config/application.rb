@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,9 +13,9 @@ module BudgetApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
-    config.hosts << "budgetapp-q1s5.onrender.com"
+    config.hosts << 'budgetapp-q1s5.onrender.com'
 
-    def after_sign_out_path_for(resource_or_scope)
+    def after_sign_out_path_for(_resource_or_scope)
       unauthenticated_root_path
     end
     # Configuration for the application, engines, and railties goes here.

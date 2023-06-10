@@ -1,11 +1,12 @@
-class DealsController < ApplicationController
+# frozen_string_literal: true
 
-    def new
-        @categories = Category.all
-        @category = Category.find(params[:category_id])
-        @deal = Deal.new
-      end
-    
+class DealsController < ApplicationController
+  def new
+    @categories = Category.all
+    @category = Category.find(params[:category_id])
+    @deal = Deal.new
+  end
+
   def create
     @deal = Deal.new(deal_params.merge(author: current_user))
     @category = Category.find(params[:category_id])
@@ -13,7 +14,7 @@ class DealsController < ApplicationController
       @categories = Category.all
       @deal.categories << @category unless @deal.categories.include?(@category)
       @categories.each do |category|
-       @deal.categories << category unless @deal.categories.include?(category)
+        @deal.categories << category unless @deal.categories.include?(category)
       end
       redirect_to category_path(@category)
     else
