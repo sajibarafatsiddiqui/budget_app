@@ -54,8 +54,16 @@
 - **Added Integration testing using Capybara**
 - **Added Devise for Authentication.**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Deployment
+
+🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budgetapp-q1s5.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -100,18 +108,22 @@ rspec
 
 Integration Test:
  rspec ./spec/feature
+ 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>## 👥 Authors <a name="authors"></a>
 
+### Deployment
 
-## Deployment
+You can deploy this project using:
 
-🚀 Live Demo <a name="live-demo"></a>
+<!--
+Example:
 
-- [Live Demo Link](https://budgetapp-q1s5.onrender.com)
+```sh
+
+```render.yml
+ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>## 👥 Authors <a name="authors"></a>
 
 👤 **Author1**
 
