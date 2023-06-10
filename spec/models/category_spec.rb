@@ -23,7 +23,6 @@ RSpec.describe Category, type: :model do
     let(:user) { User.create!(name: 'Test', email: 'sajiba@arafat.com', password: 'daafddf') }
     subject { Category.new(Name: 'Category Name') }
 
-
     it 'validates presence of name' do
       subject.icon.attach(io: File.open('spec/fixtures/files/test.png'), filename: 'test.png',
                           content_type: 'image/png')

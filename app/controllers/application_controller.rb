@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
     ActiveStorage::Current.url_options = { protocol: request.protocol, host: request.host, port: request.port }
   end
 
-
   protected
 
   def configure_permitted_parameters
