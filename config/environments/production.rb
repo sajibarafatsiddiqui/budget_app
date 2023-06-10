@@ -5,8 +5,6 @@ require 'active_support/core_ext/integer/time'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Code is not reloaded between requests.
-  url = blob.service_url_for_direct_upload(host: 'myhost.com')
 
   config.cache_classes = true
 
