@@ -7,8 +7,8 @@ class Category < ApplicationRecord
   validates :Name, presence: true
 
   # attribute :icon_path, :string
-  def icon_url
-    ActiveStorage::Current.host = request.base_url
+  def icon_url(host)
+    ActiveStorage::Current.host = host
     icon.url if icon.attached?
   end
 end

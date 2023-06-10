@@ -27,7 +27,7 @@
 <% @categories.each do |category| %>
     <%= link_to category_path(category[:id] ), class:"text-decoration-none" do %>
     <div class="d-flex flex-row align-items-center bg-white justify-content-between p-4 m-3 ">
-      <img src="<%= category.icon_url %>" alt="Image"  style="max-width:5%;">
+      <img src="<%= category.icon_url(request.base_url) %>" alt="Image"  style="max-width:5%;">
       <h4 class="text-muted fs-4 bg-white"><%= category.Name %></h2>
       <p class="bg-white m-0">Total amount: <%= number_to_currency(category.deals.sum(:amount)) %></p>
       </div>
