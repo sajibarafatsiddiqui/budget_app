@@ -7,10 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <% unless current_page?(unauthenticated_root_path) || current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'devise/registrations', action: 'new') %>
+      <% if current_user %>
+        <%= render 'layouts/navbar' %>
+      <% end %>
+    <% end %>
+   
+      <%= yield %>
+  
   </body>
 </html>
