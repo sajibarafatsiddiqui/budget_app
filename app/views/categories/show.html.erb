@@ -1,21 +1,19 @@
-
 <div class="d-flex align-items_center  justify-content-between p-3" style= "background: #3778c2; color: white">
-<%= link_to(:back) do %>
-<span class="justify-self-start d-flex"><i class="fa fa-arrow-left" style="color: white; font-size: 1.5rem"></i></span>
-<% end %>
-<h4 class="text-center"><%= @category.Name %></h4>
-<p class="m-0 p-0">Total amount: <%= number_to_currency(@deals.sum(:amount)) %></p>
+  <%= link_to(:back) do %>
+    <span class="justify-self-start d-flex"><i class="fa fa-arrow-left" style="color: white; font-size: 1.5rem"></i></span>
+  <% end %>
+  <h4 class="text-center"><%= @category.Name %></h4>
+  <p class="m-0 p-0">Total amount: <%= number_to_currency(@deals.sum(:amount)) %></p>
 </div>
-    <% @deals.each do |deal| %>
-    <div class="d-flex flex-row justify-content-between flex-grow-1 m-2 p-4 bg-white">
+<% @deals.each do |deal| %>
+  <div class="d-flex flex-row justify-content-between flex-grow-1 m-2 p-4 bg-white">
     <div class="d-flex flex-column">
-       <h4 class="text-muted"><%= deal.name %></h4> 
-        <span><%= deal.created_at.strftime('%m/%d/%Y') %></span>
-        </div>
-        <h4><%= number_to_currency(deal.amount) %></h4>
-        
+      <h4 class="text-muted"><%= deal.name %></h4>
+      <span><%= deal.created_at.strftime('%m/%d/%Y') %></span>
     </div>
-    <% end %>
-    <div class="w-100 fixed-bottom">
-    <%= link_to "ADD A NEW DEAL", new_category_deal_path(@category), class: "btn btn-success w-100" %>
+    <h4><%= number_to_currency(deal.amount) %></h4>
+  </div>
+<% end %>
+<div class="fixed-bottom">
+  <%= link_to "ADD A NEW DEAL", new_category_deal_path(@category), class: "btn btn-success w-100" %>
 </div>

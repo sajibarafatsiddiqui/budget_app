@@ -1,4 +1,4 @@
-<div style= "background: #3778c2; color: white p-0 m-0 ">
+<div style= "background: #3778c2; color: white">
   <div class="d-flex align-items-center p-2 " >
     <%= link_to(:back) do %>
       <span class="justify-self-start d-flex"><i class="fa fa-arrow-left" style="color: white; font-size: 1.5rem"></i></span>
@@ -20,20 +20,19 @@
           </li>
         </ul>
       </div>
-  </nav>
-</div>
-<p class="text-center" style="text-emphasis-style: dot; text-emphasis-position: under left">Most Recent</p>
+    </nav>
+  </div>
+  <p class="text-center" style="text-emphasis-style: dot; text-emphasis-position: under left">Most Recent</p>
 </div>
 <% @categories.each do |category| %>
-<%= link_to category_path(category[:id] ), class:"text-decoration-none" do %>
-  <div class="d-flex align-items-center bg-white gap-5 p-3 m-2 ">
-
-    <img src="<%= category.icon_url %>" alt="Image"  style="max-width:5%;">
-    <h4 class="text-muted fs-4 bg-white col-8"><%= category.Name %></h2>
-    <p class="bg-white m-0">Total amount: <%= number_to_currency(category.deals.sum(:amount)) %></p>
-  </div>
-  <% end %>
+    <%= link_to category_path(category[:id] ), class:"text-decoration-none" do %>
+    <div class="d-flex flex-row align-items-center bg-white justify-content-between p-4 m-3 ">
+      <img src="<%= category.icon_url %>" alt="Image"  style="max-width:5%;">
+      <h4 class="text-muted fs-4 bg-white"><%= category.Name %></h2>
+      <p class="bg-white m-0">Total amount: <%= number_to_currency(category.deals.sum(:amount)) %></p>
+      </div>
+    <% end %>
 <% end %>
 <div class="fixed-bottom ">
-  <%= link_to "ADD A NEW CATEGORY", new_category_path, class: "btn btn-success w-100 p-4" %>
+  <%= link_to "ADD A NEW CATEGORY", new_category_path, class: "btn btn-success w-100 p-3" %>
 </div>
