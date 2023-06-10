@@ -13,6 +13,9 @@ module BudgetApp
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.hosts << "budgetapp-q1s5.onrender.com"
 
+    def after_sign_out_path_for(resource_or_scope)
+      unauthenticated_root_path
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

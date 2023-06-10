@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% unless current_page?(unauthenticated_root_path) || current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'devise/registrations', action: 'new') %>
+    <% unless current_page?(authenticated_root_path) || current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'devise/registrations', action: 'new') %>
       <% if current_user %>
         <%= render 'layouts/navbar' %>
       <% end %>
