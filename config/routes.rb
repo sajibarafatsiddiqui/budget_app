@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   end
   
   unauthenticated do
-    devise_scope :user do
       root 'home#index', as: :unauthenticated_root
-    end
   end
 
  
