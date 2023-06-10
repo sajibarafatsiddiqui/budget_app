@@ -38,7 +38,7 @@ Rails.application.configure do
   # bootstrap
   config.sass.inline_source_maps = true
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  #config.active_storage.service = :local
   config.action_mailer.default_url_options = 'localhost:3000'
 
   # Don't care if the mailer can't send.
