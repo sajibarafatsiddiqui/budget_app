@@ -39,7 +39,11 @@ Rails.application.configure do
   config.sass.inline_source_maps = true
   # Store uploaded files on the local file system (see config/storage.yml for options).
   # config.active_storage.service = :local
-  config.action_mailer.default_url_options = 'localhost:3000'
+  #config.action_mailer.default_url_options = 'localhost:3000'
+
+config.active_storage.service = :local
+config.action_controller.asset_host = 'https://budgetapp-q1s5.onrender.com'
+Rails.application.routes.default_url_options[:host] = 'https://budgetapp-q1s5.onrender.com/categories'
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
