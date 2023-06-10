@@ -38,7 +38,9 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
-
+  config.active_storage.service_urls_expire_in = 1.hour
+  config.active_storage.url_options = { host: 'budgetapp-q1s5.onrender.com' }
+   
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = "wss://example.com/cable"
