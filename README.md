@@ -109,8 +109,7 @@ rspec
 Integration Test:
  rspec ./spec/feature
  
-<p align="right">(<a href="#readme-top">back to top</a>)</p>## 👥 Authors <a name="authors"></a>
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ### Deployment
 
 You can deploy this project using:
@@ -123,7 +122,12 @@ Example:
 ```render.yml
  -->
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 👥 Authors <a name="authors"></a>
+
 
 👤 **Author1**
 
