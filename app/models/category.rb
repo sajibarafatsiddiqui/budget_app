@@ -8,7 +8,7 @@ class Category < ApplicationRecord
 
   # attribute :icon_path, :string
   def icon_url
-    ActiveStorage::Current.host = 'http://localhost:3000'
+    ActiveStorage::Current.host = 'https://budgetapp-q1s5.onrender.com'
     icon.url if icon.attached?
   end
 end

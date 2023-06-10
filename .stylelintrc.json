@@ -23,7 +23,7 @@
             "variants",
             "responsive",
             "screen"
-          ]
+          ]          
         }
       ],
       "csstree/validator": true
