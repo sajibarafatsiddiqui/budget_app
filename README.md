@@ -56,9 +56,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Deployment
-
-🚀 Live Demo <a name="live-demo"></a>
+##🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://budgetapp-q1s5.onrender.com)
 
@@ -113,13 +111,13 @@ Integration Test:
 ### Deployment
  deploy this project using:
 
-<!--
-Example:
+<!-
 
 ```sh
-
   render.yml
+  rails s
 ```
+  
  -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
